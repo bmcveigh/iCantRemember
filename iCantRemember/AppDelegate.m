@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MasterViewController.h"
 
 @implementation AppDelegate
 
@@ -16,9 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    //Set the root view controller to the a MasterViewController object
+    MasterViewController *rootController = [[MasterViewController alloc] init];
+    self.window.rootViewController = rootController;
     [self.window makeKeyAndVisible];
     return YES;
 }
